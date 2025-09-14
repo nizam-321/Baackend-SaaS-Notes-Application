@@ -9,7 +9,6 @@ const User = require('./models/User')
 async function seed() {
   await mongoose.connect(process.env.MONGO_URI)
 
-  // DB साफ करना (optional)
   await Tenant.deleteMany({})
   await User.deleteMany({})
 

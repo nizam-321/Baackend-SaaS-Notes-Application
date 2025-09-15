@@ -20,7 +20,7 @@ router.post("/notes", authMiddleware, async (req, res) => {
     if (tenant.plan === "free" && noteCount >= 3) {
       return res
         .status(403)
-        .json({ message: "Note limit reached. Ask Admin to upgrade." });
+        .json({ message: "Note limit reached.Upgrade to pro." });
     }
 
     const newNote = await Note.create({

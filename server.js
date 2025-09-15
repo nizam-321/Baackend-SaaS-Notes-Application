@@ -6,6 +6,7 @@ const cors = require('cors');
 const app = express();
 app.use(express.json());
 
+
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 app.use(cors({
